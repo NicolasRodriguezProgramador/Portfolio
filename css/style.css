@@ -11,7 +11,7 @@
   --third-alpha-color: rgba(80, 20, 100, 0.75);
   --four-color: #f7df1e;
   --four-alpha-color: rgba(247, 222, 30, 0.85);
-  --five-color: #222;
+  --five-color: #212529;
   --five-alpha-color: rgba(34, 34, 34, 0.85);
   --six-color: rgb(80, 158, 227);
   --six-alpha-color: rgba(80, 158, 227, 0.75);
@@ -21,8 +21,14 @@
 
 /* ************ Reset Styles ************ */
 
-html {
+* {
   overflow-x: hidden;
+}
+
+/* ************ Mis Estilos ************ */
+
+.background-2 {
+  background-image: url('../images/background2.jpg');
 }
 
 /* ************ NavBar Burguer ************ */
@@ -37,11 +43,6 @@ html {
 }
 .navbar-toggler-icon[aria-expanded=false] {
   --bs-navbar-toggler-border-color: white;
-}
-
-.navbar-brand img {
-  height: 80px;
-  width: auto;
 }
 
 .nav-link {
@@ -60,13 +61,23 @@ html {
   color: var(--six-color);
 }
 
+.logotipo {
+  height: 70px;
+  width: auto;
+}
 
 /* ******************** H1 index ******************** */
 
 .home-title{
-  text-align: center;
+  background-color: var(--five-color);
+  width: 50vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  overflow-y: hidden;
+}
+h1 span {
+  overflow-y: hidden;
 }
 .letter-a{
   color: var(--six-color);
@@ -88,6 +99,37 @@ html {
   border-radius: 50%;
   height: 15rem;
   width: auto;
+}
+
+
+/* ******************** @Medias ******************** */
+
+@media (max-width: 769px) and (min-width: 577px) {
+  .logotipo {
+    height: 70px;
+    width: auto;
+  }
+}
+
+@media (max-width: 576px) and (min-width: 376px) {
+  .logotipo {
+    height: 60px;
+    width: auto;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 281px) {
+  .logotipo {
+    height: 50px;
+    width: auto;
+  }
+}
+
+@media (max-width: 280px) and (min-width: 219px) {
+  .logotipo {
+    height: 45px;
+    width: auto;
+  }
 }
 
 /* ******************** Animations ******************** */
@@ -143,3 +185,4 @@ html {
 .delay-25 {
   animation-delay: 2.5s;
 }
+
